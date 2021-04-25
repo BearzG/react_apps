@@ -2,6 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 import react from 'react'
 
+import { products } from './cont.json';
+
 
 class App extends react.Component {
   constructor(props) {
@@ -23,6 +25,8 @@ class App extends react.Component {
         {
           this.state.data.map(curr => <h3>{curr.Name + ' ' + curr.Email}</h3>)
         }
+
+        {products.map(actual => <h3>{actual.Milk}</h3>)}
       </div>
     );
   }
